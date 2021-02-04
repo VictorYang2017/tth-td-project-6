@@ -1,0 +1,15 @@
+include partials/header.pug
+div(id="error-page-main-container")
+    div(class="error-container")
+        div(class="error-message")
+            h1= err.status === 400 ? `Oops, looks like the page you are looking for does not exist!` : err.message.toUpperCase()
+            h2= err.status === 400 ?  `[404]` : `[${err.status}]`
+            if err.status === 500
+                pre= err.stack
+            else
+                img(src="/static/images/error-face.svg", class="error-face-img")
+        if err.status !== 500
+            div(class="client-message")
+                h2 Hi, click the button below to go back to home page!
+                a(href='/' class="client-message-btn") Back to home
+            

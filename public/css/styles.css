@@ -362,3 +362,65 @@ nav a span {
     max-width: 1200px;
   }
 }
+
+/* Error page style */
+#error-page-main-container{
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+}
+
+#error-page-main-container h1,h2,p,pre,a{
+  color: #fff;
+}
+
+#error-page-main-container h1{
+  margin-bottom:3rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+#error-page-main-container h2{
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#error-page-main-container .error-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+}
+
+/* .error-container .error-message h2{
+  margin-bottom:5rem;
+} */
+
+.error-container .error-message{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:70%;
+}
+
+.error-container .error-face-img{
+  width:15rem;
+}
+
+.error-container .client-message{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:20%;
+}
+
+.error-container .client-message-btn{
+  padding:0.5rem 1rem;
+  border: 2px solid #fff;
+}
+
+@media screen and (max-width: 765px) {
+  .error-container .error-face-img{
+    display: none;
+  }
+}

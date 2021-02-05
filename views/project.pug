@@ -15,8 +15,8 @@ block content
         ul
           each technology in currentProject.technologies
             li= technology
-        a.btn-link(href=`${currentProject.live_link}`) Live Demo
-        a.btn-link(href=`${currentProject.github_link}`) GitHub Repo
+        a.btn-link(href=`${currentProject.live_link}` target="_blank") Live Demo
+        a.btn-link(href=`${currentProject.github_link}` target="_blank") GitHub Repo
     .project-img-box.box
       each imageUrl, index in currentProject.image_urls
         img.project-img(src=`${imageUrl}`, alt=`project image ${index}`)

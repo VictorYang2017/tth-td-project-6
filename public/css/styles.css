@@ -363,64 +363,125 @@ nav a span {
   }
 }
 
-/* Error page style */
-#error-page-main-container{
-  display: flex;
-  justify-content: center;
-  min-height: 100%;
+/* My custom style */
+html{
+  height: auto;
+    min-height: auto;
 }
 
-#error-page-main-container h1,h2,p,pre,a{
+body{
+  transform: none;
+  transition: none;
+}
+
+h1,h2,h3,h4,h5,h6,p,li,a,button{
+  font-family: 'Open Sans', sans-serif;
+  color: #ccc;
+}
+
+h1,h2{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+}
+
+nav a,.sidebar p,.sidebar a, .box h5{
+  color: #ccc;
+}
+
+.portfolio-intro h1,.portfolio-intro p,.sidebar h5,.box h1{
   color: #fff;
 }
 
-#error-page-main-container h1{
-  margin-bottom:3rem;
-  text-align: center;
-  font-size: 3rem;
+nav{
+  border-width: 2px;
 }
 
-#error-page-main-container h2{
-  text-align: center;
-  font-size: 1.5rem;
+
+body #my-info{
+  position: fixed;
+  height: 55%;
+  min-height: auto;
+  bottom:auto;
+  border: 3px solid  #7f7f7f;
 }
 
-#error-page-main-container .error-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 95%;
+.thumbnail-box{
+  border-radius: 50%;
 }
 
-/* .error-container .error-message h2{
-  margin-bottom:5rem;
-} */
+article{
+  width: 80%;
+    /* border: 2px solid red; */
+    margin: 0 auto;
+}
 
-.error-container .error-message{
+article nav{
+  border-bottom: 0;
+}
+
+.portfolio-intro p{
+  border-width: 2px;
+}
+
+.projects-box{
+  margin: 0 auto;
+}
+
+.project-img{
+  border-color: #7f7f7f;
+}
+
+.btn-link{
+  margin: 0.5rem 0;
+  border: 2px solid #7f7f7f;
+}
+
+
+.wrapper,article, .box, body{
+  background-color: #191919;
+}
+
+.error-message, .client-message{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height:70%;
+  width:95%;
 }
 
-.error-container .error-face-img{
-  width:15rem;
+.error-message h1{
+  margin-top: 5rem;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
 }
 
-.error-container .client-message{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height:20%;
+.error-message h2{
+  text-align: center;
+  font-size: 2rem;
 }
 
-.error-container .client-message-btn{
+.error-message pre{
+  white-space: pre-wrap;
+  color:#ccc;
+}
+
+.error-message .error-face-img{
+  width: 15rem;
+}
+
+.client-message h2{
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.client-message .client-message-btn{
   padding:0.5rem 1rem;
-  border: 2px solid #fff;
+  color:#ccc;
+  border: 3px solid #7f7f7f;
 }
 
 @media screen and (max-width: 765px) {
-  .error-container .error-face-img{
+  .error-message .error-face-img{
     display: none;
   }
-}
+} 

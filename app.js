@@ -12,13 +12,6 @@ app.set('views', path.join(__dirname, 'views'));
 // Setting static files and send it to the client side
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
-// app.use((req,res,next)=>{
-//   const err = new Error('Server Error');
-//   err.status = 500;
-//   res.status(500);
-//   next(err);
-// });
-
 /* 
   Routes
 */

@@ -1,18 +1,28 @@
-include partials/header.pug
-#my-info.sidebar
-  .sidebar-info-box
-    br
-    .thumbnail-box
-      img.thumbnail(src='https://placehold.it/550x350', alt='')
-    .dev-intro-box
-      h5 Victor
-      p Vivamus aliquet lorem eu felis vehicula commodo. Aenean nec finibus neque, id malesuada tellus. Morbi maximus vestibulum scelerisque.
-      a(href=`/about`) Learn More &rarr;
+<!DOCTYPE html>
+html(lang="en" dir="ltr")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Portfolio Site
+    link(href='https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab:wght@400;500&display=swap', rel='stylesheet')
+    link(rel='stylesheet', href='/static/css/normalize.css')
+    link(rel='stylesheet', href='/static/css/styles.css')
+  body
+    #my-info.sidebar
+      .sidebar-info-box
+        br
+        .thumbnail-box
+          img.thumbnail(src='/static/images/profile-placeholder-image.jpg', alt='')
+        .dev-intro-box
+          h5 Victor
+          p Vivamus aliquet lorem eu felis vehicula commodo. Aenean nec finibus neque, id malesuada tellus. Morbi maximus vestibulum scelerisque.
+          a(href=`/about`) Learn More &rarr;
 
-.wrapper
-  .header
-    .header-info-box
-      button#menu-icon.menu-icon(type='button' data-toggle='my-info')
-      span Victor
-  block content
-script(src='/static/js/script.js')
+    .wrapper
+      .header
+        .header-info-box
+          button#menu-icon.menu-icon(type='button' data-toggle='my-info')
+          span Victor
+      block content
+    script(src='/static/js/script.js')

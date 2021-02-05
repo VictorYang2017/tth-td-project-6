@@ -37,5 +37,3 @@ router.get("/project/:id", checkProjectIdFormat, (req, res, next) => {
 });
 
 module.exports = router;
-
-// http://localhost:3000/project/564wefe&$o468!@$@fawffe!@%5E&-*=-ges_+

@@ -1,22 +1,30 @@
-const express = require('express');
-const path = require('path');
+const express = require("express");
+const path = require("path");
 const app = express();
 
 // Import homeRoutes and error handlers
-const homeRoute = require('./routes/homeRoute');
-const {pageNotFound, customErrorHandler} = require('./middleware/errorHandlers');
+const homeRoute = require("./routes/homeRoute");
+const {
+  pageNotFound,
+  customErrorHandler,
+} = require("./middleware/errorHandlers");
 
-app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'views'));
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));
 
 // Setting static files and send it to the client side
-app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use("/static", express.static(path.join(__dirname, "public")));
+
+// No favicon, prevent favicon error
+app.get('/favicon.ico', (req, res) => {
+  return res.status(204).end();
+});
 
 /* 
   Routes
 */
 //Home route
-app.use('/', homeRoute);
+app.use("/", homeRoute);
 
 /*
   Error handlers
